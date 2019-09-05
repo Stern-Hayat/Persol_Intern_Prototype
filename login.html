@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<!--<head>タグ-->
+<head>
+    <meta charset="UTF-8">
+    
+    <!--外部cssファイルを読み込むときはここに記述-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="global.css">
+   
+    <!--これをコピー-->
+    <link rel="stylesheet" type="text/css" href="ファイル名.css">
+
+    
+    <!--タブに表示するタイトルを記述-->
+    <title>タブタイトルをここに入力</title>
+
+   <!-- 内部cssを記述する場合はここに記述 -->
+    <style type="text/css">
+    
+        
+        #form {
+            width: 40%;
+            margin: 100px 30%;
+            padding: 30px; 100px;
+            background-color: #FEFEFE;
+        }
+        
+        #form h3 {
+            font-weight: bold;
+        }
+        
+        .hoge{
+            width: 100%;
+        }
+        
+        .check{
+            text-align: center;
+        }
+    
+        .submit{
+            border:solid 1px #ccc;
+            padding: 10px;
+            background-color: #77DD77;
+            font-family:Arial, sans-serif;
+            font-size:1.2em;
+            text-transform:uppercase;
+            font-weight:bold;
+            color:#333;
+            cursor:pointer;
+            width: 100%;
+            height: 50px;
+        }
+
+    </style>
+    
+    
+    <!-- jQueryを呼び込むのに必要なので残しとく-->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+   
+   
+    <!-- 内部javaScriptを記述する場合はここに記述 -->
+    <script type="text/javascript">
+        
+        let user_id = 'persol123';
+        let user_pass = 'persol123';
+        
+        let input_id = document.getElementById('user-hoge');
+        let input_pass = document.getElementById('user-pass');
+        
+        console.log(input_id);
+        
+    </script>
+</head>
+
+
+<!--<body>タグ-->
+<body>
+
+<!--ヘッダーの編集-->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+      <a href="index.html" class="navbar-brand">サービス名</a>
+
+</nav>
+
+<div id="form">
+    <h3>ログイン画面</h3>
+        <p>Username</p>
+        <p class="username"><input type="text" name="username" id = "user-hoge" class="hoge" maxlength="32" autocomplete="OFF" /></p>
+        <p>Password</p>
+        <p class="password"><input type="password" name="password" id = "user-pass" class="hoge" maxlength="32" autocomplete="OFF" /></p>
+        <p class="check"><input type="checkbox" name="checkbox" />パスワードを保存</p>
+        <p class="submt"><input type="submit" class="submit" value="Enter" /></p>
+</div>
+
+
+<!--フッターの編集--> 
+<footer class="footer">
+  <div class="container">
+    <p>persol</p>
+  </div>
+</footer>
+
+   
+   <!--jQueryを呼び出すのに必要。残しておく-->
+    <script
+     src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>

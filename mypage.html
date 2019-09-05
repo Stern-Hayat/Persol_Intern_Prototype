@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<!--<head>タグ-->
+<head>
+    <meta charset="UTF-8">
+    
+    <!--外部cssファイルを読み込むときはここに記述-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="global.css">
+   
+    <!--これをコピー-->
+    <link rel="stylesheet" type="text/css" href="ファイル名.css">
+
+    
+    <!--タブに表示するタイトルを記述-->
+    <title>タブタイトルをここに入力</title>
+
+   <!-- 内部cssを記述する場合はここに記述 -->
+    <style type="text/css">
+    
+        .menu{
+            background-color: white;
+            border: 2px solid gray;
+            width: 80%;
+            margin: 100px 10%;
+            display: inline-block;
+        }
+        
+        .menu-button{
+            border:solid 1px #ccc;
+            padding:0px 30px;
+            margin:0 0 20px;
+            font-family:Arial, sans-serif;
+            font-size:1.2em;
+            text-transform:uppercase;
+            font-weight:bold;
+            color:#333;
+            cursor:pointer;
+        }
+        
+        .left-content{
+            width: 30%;
+            border: 2px solid black;
+            float: left;
+            
+        }
+        
+        .right-content{
+            width: 70%;
+            border: 2px solid black;
+            float: left;
+            
+        }
+
+    </style>
+    
+    
+    <!-- jQueryを呼び込むのに必要なので残しとく-->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+   
+   
+    <!-- 内部javaScriptを記述する場合はここに記述 -->
+    <script type="text/javascript">
+        
+        
+        let txt1 = 'マイページ';
+        let txt2 = '面接管理画面';
+        let txt3 = '面接申し込み';
+        let txt4 = 'チャット';
+        let txt5 = '履歴/企業情報';
+        
+        function mypage(txt){
+            document.getElementById('mypage-title').innerHTML = txt;
+        }
+        
+        function admin(txt){
+            document.getElementById('mypage-title').innerHTML = txt;
+        }
+        
+        function apply(txt){
+            document.getElementById('mypage-title').innerHTML = txt;
+        }
+        
+        function chat(txt){
+            document.getElementById('mypage-title').innerHTML = txt;
+        }
+        function info(txt){
+            document.getElementById('mypage-title').innerHTML = txt;   
+        }
+        
+        
+    </script>
+</head>
+
+
+<!--<body>タグ-->
+<body>
+
+<!--ヘッダーの編集-->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+      <a href="index.html" class="navbar-brand">サービス名</a>
+
+</nav>
+
+
+<div class="menu">
+    <input type="button" onclick="mypage(txt1)" value="マイページ" class="menu-button">
+    <input type="button" onclick="admin(txt2)" value="面接管理画面" class="menu-button">
+    <input type="button" onclick="apply(txt3)" value="面接申し込み" class="menu-button">
+    <input type="button" onclick="chat(txt4)" value="チャット" class="menu-button">
+    <input type="button" onclick="info(txt5)" value="履歴/企業情報" class="menu-button">
+    
+  <div class="menu-content">
+      
+      <h1 id="mypage-title">マイページ</h1>
+      
+      <div class = "left-content">
+          あああ
+
+      </div>
+      <div class = "right-content">
+          いいい
+      </div>
+      
+  </div>
+    
+</div>
+
+<!--フッターの編集--> 
+<footer class="footer">
+  <div class="container">
+    <p>persol</p>
+  </div>
+</footer>
+
+   
+   <!--jQueryを呼び出すのに必要。残しておく-->
+    <script
+     src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>

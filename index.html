@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<!--<head>タグ-->
+<head>
+    <meta charset="UTF-8">
+    
+    <!--外部cssファイルを読み込むときはここに記述-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="global.css">
+   
+    <!--これをコピー-->
+    <link rel="stylesheet" type="text/css" href="ファイル名.css">
+
+    
+    <!--タブに表示するタイトルを記述-->
+    <title>タブタイトルをここに入力</title>
+
+   <!-- 内部cssを記述する場合はここに記述 -->
+    <style type="text/css">
+
+    </style>
+    
+    
+    <!-- jQueryを呼び込むのに必要なので残しとく-->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+   
+   
+    <!-- 内部javaScriptを記述する場合はここに記述 -->
+    <script type="text/javascript">
+        
+        var txt1 = "アイウエオ";
+        var txt2 = "かきくけこ";
+        var txt3 = "さしすせそ";
+        
+        function shuffle(){
+            var random = Math.floor( Math.random() * 11 );
+           
+            switch(random){
+                case 1 :
+                    $('.a').after($('.d')); 
+                    $('.c').after($('.d'));
+                    break;
+                case 2 :
+                    $('.b').after($('.e')); 
+                    $('.f').after($('.d'));
+                    break;
+                case 3 :
+                    $('.c').after($('.f')); 
+                     ('.e').after($('.a'));
+                    break;
+                case 4 :
+                    $('.d').after($('.d')); 
+                    $('.c').after($('.a'));
+                    break;
+                case 5 :
+                    $('.e').after($('.b')); 
+                    $('.e').after($('.c')); 
+                    break;
+                case 6 :
+                    $('.f').after($('.c')); 
+                    $('.e').after($('.b')); 
+                    break;     
+                case 7 :
+                    $('.f').after($('.a')); 
+                    $('.c').after($('.d')); 
+                    break;
+                case 8 :
+                    $('.c').after($('.b')); 
+                    $('.f').after($('.a')); 
+                    break;
+                case 9 :
+                    $('.e').after($('.d')); 
+                    $('.b').after($('.a')); 
+                    break;
+                case 10 :
+                    $('.d').after($('.c')); 
+                    $('.f').after($('.a')); 
+                    break;     
+            }
+        }
+        
+        function changeText(txt) {
+            document.getElementById("letter").innerHTML=txt;
+        }
+        
+    </script>
+</head>
+
+
+<!--<body>タグ-->
+<body>
+
+<!--ヘッダーの編集-->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+      <a href="index.html" class="navbar-brand">タイトル</a>
+
+      <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#target_point">メニュー1</a>
+          <a class="nav-item nav-link" href="list.html">メニュー2</a>
+          <a class="nav-item nav-link" href="owabi.html">メニュー3</a>
+     </div>
+</nav>
+
+<!--中身, divクラスを作ってその中にコンテンツを入れるのが一般的-->
+<div class="page">
+   
+   <div class="a">
+       <h1>aさん</h1>
+   </div>
+   <div class="b">
+       <h1>bさん</h1>
+   </div>
+   <div class="c">
+       <h1>cさん</h1>
+   </div>
+   <div class="d">
+       <h1>dさん</h1>
+   </div>
+   <div class="e">
+       <h1>eさん</h1>
+   </div>
+   <div class="f">
+       <h1>fさん</h1>
+   </div>
+    
+    <input type="button" onclick="shuffle()" value="シャッフル">
+    
+</div>
+
+<hr>
+
+<div class = "tab">
+   <h1>タブ切り替えのサンプル</h1>
+   
+   <input type="button" onclick="changeText(txt1)" value="A">
+   <input type="button" onclick="changeText(txt2)" value="B">
+   <input type="button" onclick="changeText(txt3)" value="C">
+    
+   <div class="write_area">
+      <p id="letter">アイウエオアイウエオ</p>
+   </div> 
+
+    
+</div>
+
+
+<!--フッターの編集--> 
+<footer class="footer">
+  <div class="container">
+    <p>©︎2018 関西学院大学文化総部学生本部</p>
+  </div>
+</footer>
+
+   
+   <!--jQueryを呼び出すのに必要。残しておく-->
+    <script
+     src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
