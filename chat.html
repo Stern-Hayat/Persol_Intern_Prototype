@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<!--<head>タグ-->
+<head>
+    <meta charset="UTF-8">
+    
+    <!--外部cssファイルを読み込むときはここに記述-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="global.css">
+   
+    <!--これをコピー-->
+    <link rel="stylesheet" type="text/css" href="ファイル名.css">
+
+    
+    <!--タブに表示するタイトルを記述-->
+    <title>タブタイトルをここに入力</title>
+
+   <!-- 内部cssを記述する場合はここに記述 -->
+    <style type="text/css">
+    
+        .menu{
+            background-color: white;
+            border: 2px solid gray;
+            width: 80%;
+            margin: 100px 10%;
+            display: inline-block;
+        }
+        
+        .content-width{
+            width: 100%;
+        }
+        
+        .logo-image{
+            width: 50px;
+            height: 50px;
+        }
+        .chat-logo-image{
+            width: 70px;
+            height: 70px;
+        }
+        
+        .video-player{
+            background-color: black;
+            width: 100%;
+            height: 540px;
+        }
+        
+        .video-info{
+            width: 100%;
+            height: 120px;
+            display: inline-block;
+        }
+        
+        .video-info img{
+            float: left;
+            margin: 10px;
+        }
+        
+        .image{
+            float: left;
+            height: auto;   
+        }
+        
+        .serif {
+          float: left;
+          position: relative;
+          display: inline-block;
+          margin: 1.5em 100px 1.5em 15px;
+          padding: 7px 10px;
+          min-width: 120px;
+          max-width: 100%;
+          color: #555;rr
+          font-size: 16px;
+          background: #e0edff;
+        }
+
+        .serif:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: -30px;
+          margin-top: -15px;
+          border: 15px solid transparent;
+          border-right: 15px solid #e0edff;
+        }
+
+        .serif p {
+              margin: 0;
+              padding: 0;
+        }
+
+        
+        .myserif {
+              position: relative;
+              display: inline-block;
+              float: right;
+              margin: 1.5em 15px 1.5em 0;
+              padding: 7px 10px;
+              min-width: 120px;
+              max-width: 100%;
+              color: #555;
+              font-size: 16px;
+              background: lightgreen;
+            }
+
+            .myserif:before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 100%;
+              margin-top: -15px;
+              border: 15px solid transparent;
+              border-left: 15px solid lightgreen;
+            }
+
+            .myserif p {
+              margin: 0;
+              padding: 0;
+            }
+        
+        #hoge{
+            width: 90%;
+            border-radius: 5px;
+            height: 80px;
+        }
+        
+    </style>
+    
+    
+    <!-- jQueryを呼び込むのに必要なので残しとく-->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+   
+   
+    <!-- 内部javaScriptを記述する場合はここに記述 -->
+    <script>
+        
+    </script>
+</head>
+
+
+<!--<body>タグ-->
+<body>
+
+<div id="wrapper">
+   <!--ヘッダーの編集-->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+      <a href="mypage.html" class="navbar-brand">MenSetting</a>
+    <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#target_point">ログアウト</a>
+     </div>
+
+</nav>
+
+
+<div class="menu">
+    
+  <div class="menu-content">
+  
+      <h1 id="mypage-title">チャット</h1>
+      
+      <div class="video-info">
+          <div class="serif">
+              <img src="img/g.png" class="chat-logo-image">
+            <p>説明会のご参加と友だち追加ありがとうございます！
+            会社の雰囲気やどのようなプロジェクトに携わっているのかなど、当社をもっと身近に感じていただけるような記事を定期的に配信していきますので、楽しみにしていてくださいね！
+            LINEでの個人メッセージは受け付けておりません。恐れ入りますが、ご質問やご連絡の際は、OfferBox、Wantedly、メールなどでやりとりさせていただければと思います。</p>
+         </div>
+      </div>
+      
+     <div class="video-info">
+          <div class="myserif">
+            <p>本日はありがとうございました。今後ともよろしくお願いいたします</p>
+         </div>
+      </div>
+      
+      <div class="video-info">
+          <input type="text" id="hoge" placeholder="ここにメッセージを入力">
+          <input type="button" maxlength="32" style="background-color: green; color: white;" value="送信する">
+      </div>
+      
+      
+
+  </div>
+    
+</div>
+
+<!--フッターの編集--> 
+<footer class="footer">
+  <div class="container">
+    <p>persol</p>
+  </div>
+</footer>
+
+   
+   <!--jQueryを呼び出すのに必要。残しておく-->
+    <script
+     src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> 
+</div>
+
+
+  </body>
+</html>

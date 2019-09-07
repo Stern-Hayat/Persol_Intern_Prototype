@@ -76,6 +76,10 @@
             height: auto;
             margin: 0;
         }
+               
+        #input-form{
+            width: 100%; 
+        }
     </style>
     
     
@@ -96,10 +100,9 @@
         let txt4 = 'チャット';
         let txt5 = '履歴/企業情報';
         
-        function alert_persol(){
-            alert('申し込みが完了しました');
-        }
-
+  
+        let star_default = 3;
+        
         function mypage(txt){
             document.getElementById('mypage-title').innerHTML = txt;
             document.getElementById("mypage-menu").style.display = "block";
@@ -147,81 +150,13 @@
         
 
         
-        
-        let star_count = 3;
-        
-        function plus(star_count){
-            
-            var eva = document.getElementById('stars')
-
-            if(star_count == 5){
-                star_count = 5;
-                eva.innerHTML = '★★★★★';
-            } else {
-                
-                star_count = star_count + 1;
-                alert(star_count);
-                
-                switch (star_count){
-                    case 5:
-                        eva.innerHTML = '★★★★★';
-                        break;
-                    case 4:
-                        eva.innerHTML = '★★★★☆';
-                        break;
-                    case 3:
-                        eva.innerHTML = '★★★☆☆';
-                        break;
-                    case 2:
-                        eva.innerHTML = '★★☆☆☆';
-                        break;
-                    case 1:
-                        eva.innerHTML = '★☆☆☆☆';
-                        break;
-                }
-            }
-        }
-        
-       function minus(star_count){
-            
-            var eva = document.getElementById('stars')
-
-            if(star_count == 5){
-                star_count = 5;
-                
-                eva.innerHTML = '★★★★★';
-            } else {
-                
-                star_count = star_count - 1;
-                alert(star_count);
-                
-                switch (star_count){
-                    case 5:
-                        eva.innerHTML = '★★★★★';
-                        break;
-                    case 4:
-                        eva.innerHTML = '★★★★☆';
-                        break;
-                    case 3:
-                        eva.innerHTML = '★★★☆☆';
-                        break;
-                    case 2:
-                        eva.innerHTML = '★★☆☆☆';
-                        break;
-                    case 1:
-                        eva.innerHTML = '★☆☆☆☆';
-                        break;
-                }
-            }
-        }
-                
     </script>
 </head>
 
 
 <!--<body>タグ-->
 <body>
-<div id ="wrapper">
+<div id="wrapper">
     <!--ヘッダーの編集-->
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
 
@@ -249,36 +184,37 @@
        <div class="content-width">
             <table class="table table-striped">
                 <tr>
-                    <td rowspan="6" style="vertical-align: middle; text-align: center;" >
+                    <td rowspan="6" style="text-align: center; vertical-align: middle;">
                         <img src="img/profile.png" class="profile-image">
-
+                        <br>
+                        <br>
+                        <input type="button" value="画像の修正">
                     </td>
                 </tr>
                 <tr>
                     <th>大学</th>
-                    <td>青白学院大学（東京都）</td>
+                    <td><input id="input-form" type="text"></td>
                 </tr>
                 <tr>
                     <th>高校</th>
-                    <td>上神高等学校　総合特進コース（山口県）</td>
+                   <td><input id="input-form" type="text"></td>
                 </tr>
                 <tr>
                     <th>住所</th>
-                    <td>神奈川県横須賀市青葉一丁目3-7-5 ベルハイツ田岡 303号室</td>
+                    <td><input id="input-form" type="text"></td>
                 </tr>
                 <tr>
                     <th>卒業年度</th>
-                    <td>2021年度</td>
+                    <td><input id="input-form" type="text"></td>
                 </tr>
                 <tr>
                     <th>生年月日</th>
-                    <td>1998年 9月10日</td>                    
+                    <td><input id="input-form" type="text"></td>               
                 </tr>
             </table>           
        </div>
-        <a href="introduction.html">
-            <input type="button" value="個人情報の修正" style="width: 100%; height: 60px; margin: 30px 0;"> 
-        </a>
+        
+        <a href="mypage.html"><input type="button" value="個人情報の更新" style="width: 100%; height: 60px; margin: 30px 0;"> </a>
 </div>
       
 <div id="admin-menu" class = "conetent-width">
@@ -398,7 +334,7 @@
                         </form>
                     </td>
                     <td>
-                        <input type="button" onclick="alert_persol()" value="申し込みをする">
+                        <input type="button" value="申し込みをする">
                     </td>
                 </tr>
             </tbody>
@@ -426,11 +362,7 @@
           </tr>          
           <tr>
               <td><img class="chat-logo-image" src="img/g.png"></td>
-              <td>
-              <a href="chat.html">
-                  G company
-              </a>
-              </td>
+              <td>G company</td>
               <td><img class="chat-logo-image" src="img/h.png"></td>
               <td>H company</td>
               <td><img class="chat-logo-image" src="img/c.png"></td>
@@ -458,48 +390,48 @@
                     <td>9月6日</td>
                     <td>13:00〜</td>
                     <td><img src="img/a.png" class="logo-image">　A company</td>
-                    <td><p id="stars">★★★☆☆</p></td>
-                    <td><input type="button" onclick="plus(star_count)" value="+"><input type="button" onclick="minus(star_count)"  value="-"></td>
+                    <td><p class="stars">★★★☆☆</p></td>
+                    <td><input id ="plus" type="button" onclick="plus()" value="+"><input id="minus" onclick="minus()" type="button" value="-"></td>
                 </tr>
                 <tr>
                     <th>2</th>
                     <td>9月7日</td>
                     <td>14:00〜</td>
                     <td><img src="img/b.png" class="logo-image">　B company</td>
-                    <td><p id="stars1">★★★☆☆</p></td>
-                    <td><input type="button" onclick="plus(star_count)" value="+"><input type="button" onclick="minus(star_count"  value="-"></td>
+                    <td><p class="stars">★★★☆☆</p></td>
+                    <td><input id ="plus" type="button" value="+"><input id="minus" type="button" value="-"></td>
                 </tr>
                 <tr>
                     <th>3</th>
                     <td>9月8日</td>
                     <td>13:00〜</td>
                     <td><img src="img/c.png" class="logo-image">　C company</td>
-                    <td><p id="stars2">★★★☆☆</p></td>
-                    <td><input type="button" onclick="plus(star_count)" value="+"><input type="button" onclick="minus(star_count)"  value="-"></td>
+                    <td><p class="stars">★★★☆☆</p></td>
+                    <td><input id ="plus" type="button" value="+"><input id="minus" type="button" value="-"></td>
                 </tr>
                 <tr>
                     <th>4</th>
                     <td>9月9日</td>
                     <td>13:00〜</td>
                     <td><img src="img/d.png" class="logo-image">　D company</td>
-                    <td><p id="stars3">★★★☆☆</p></td>
-                    <td><input type="button" onclick="plus(star_count" value="+"><input type="button" onclick="minus(star_count)"  value="-"></td>
+                    <td><p class="stars">★★★☆☆</p></td>
+                    <td><input id ="plus" type="button" value="+"><input id="minus" type="button" value="-"></td>
                 </tr>
                 <tr>
                     <th>5</th>
                     <td>9月10日</td>                    
                     <td>15:00〜</td>
                     <td><img src="img/e.png" class="logo-image">　E company</td>
-                    <td><p id="stars4">★★★☆☆</p></td>
-                    <td><input type="button" onclick="plus()" value="+"><input type="button" onclick="minus(star_count)"  value="-"></td>
+                    <td><p class="stars">★★★☆☆</p></td>
+                    <td><input type="button" value="+"><input type="button" value="-"></td>
                 </tr>
                 <tr>
                     <th>6</th>
                     <td>9月11日</td>
                     <td>13:30~</td>
                     <td><img src="img/f.png" class="logo-image">　F company</td>
-                    <td><p class="stars5">★★★☆☆</p></td>
-                    <td><input type="button" onclick="plus(star_count)" value="+"><input type="button" onclick="minus(star_count)"  value="-"></td>
+                    <td><p class="stars">★★★☆☆</p></td>
+                    <td><input id ="plus" type="button" value="+"><input id="minus" type="button" value="-"></td>
                 </tr>
             </tbody>
         </table>
@@ -524,5 +456,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </div>
-</body>
+
+  </body>
 </html>
